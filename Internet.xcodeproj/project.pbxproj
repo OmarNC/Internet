@@ -13,6 +13,9 @@
 		D3201FDD298DC81F00DD8B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3201FDB298DC81F00DD8B24 /* Main.storyboard */; };
 		D3201FDF298DC82200DD8B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3201FDE298DC82200DD8B24 /* Assets.xcassets */; };
 		D3201FE2298DC82200DD8B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3201FE0298DC82200DD8B24 /* LaunchScreen.storyboard */; };
+		D3201FEB298DCBB900DD8B24 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3201FEA298DCBB900DD8B24 /* Network.framework */; };
+		D3201FED298DF5C200DD8B24 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3201FEC298DF5C200DD8B24 /* WebKit.framework */; };
+		D3201FF1298DFD1200DD8B24 /* entrenamiento_anaeróbico.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D3201FF0298DFD1200DD8B24 /* entrenamiento_anaeróbico.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D3201FDE298DC82200DD8B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3201FE1298DC82200DD8B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3201FE3298DC82200DD8B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3201FEA298DCBB900DD8B24 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		D3201FEC298DF5C200DD8B24 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D3201FF0298DFD1200DD8B24 /* entrenamiento_anaeróbico.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "entrenamiento_anaeróbico.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3201FED298DF5C200DD8B24 /* WebKit.framework in Frameworks */,
+				D3201FEB298DCBB900DD8B24 /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				D3201FD4298DC81F00DD8B24 /* Internet */,
 				D3201FD3298DC81F00DD8B24 /* Products */,
+				D3201FE9298DCBB800DD8B24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +69,21 @@
 				D3201FD7298DC81F00DD8B24 /* SceneDelegate.swift */,
 				D3201FD9298DC81F00DD8B24 /* ViewController.swift */,
 				D3201FDB298DC81F00DD8B24 /* Main.storyboard */,
+				D3201FF0298DFD1200DD8B24 /* entrenamiento_anaeróbico.pdf */,
 				D3201FDE298DC82200DD8B24 /* Assets.xcassets */,
 				D3201FE0298DC82200DD8B24 /* LaunchScreen.storyboard */,
 				D3201FE3298DC82200DD8B24 /* Info.plist */,
 			);
 			path = Internet;
+			sourceTree = "<group>";
+		};
+		D3201FE9298DCBB800DD8B24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3201FEC298DF5C200DD8B24 /* WebKit.framework */,
+				D3201FEA298DCBB900DD8B24 /* Network.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3201FE2298DC82200DD8B24 /* LaunchScreen.storyboard in Resources */,
+				D3201FF1298DFD1200DD8B24 /* entrenamiento_anaeróbico.pdf in Resources */,
 				D3201FDF298DC82200DD8B24 /* Assets.xcassets in Resources */,
 				D3201FDD298DC81F00DD8B24 /* Main.storyboard in Resources */,
 			);
@@ -293,8 +313,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +343,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

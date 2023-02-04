@@ -6,14 +6,35 @@
 //
 
 import UIKit
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var hasInternetAccess = false
+    var connetionType = ""
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let  monitor = NWPathMonitor()
+        
+        monitor.start(queue: DispatchQueue.global())
+        monitor.pathUpdateHandler = {path in
+            if path.status == .satisfied {
+                self.hasInternetAccess = true
+                if path.usesInterfaceType(.wifi) {
+                    self.connetionType = "WIFI"
+                } else {
+                    self.connetionType = "No WiFi"
+                }
+            } else {
+                self.hasInternetAccess = true
+                self.connetionType = "WIFI"
+            }
+        }
+        
+        
         return true
     }
 
